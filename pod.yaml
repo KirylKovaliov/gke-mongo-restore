@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: gke-mongo-restore
+spec:
+  containers:
+  - name: gke-mongo-restore
+    image: lgt-mongo-restore-service:latest
+    resources:
+      limits:
+        memory: "200Mi"
+      requests:
+        memory: "100Mi"
